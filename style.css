@@ -3,7 +3,7 @@
    (one CSS for all pages: Home, Projects, About, Contact)
 ----------------------------------------------------- */
 
-/* Google Fonts import (si tu as Internet côté navigateur) */
+/* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
 
 /* ---------- Design tokens ---------- */
@@ -16,7 +16,7 @@
   --muted: #7a7a7a;       /* texte secondaire */
   --border: #e0d6c8;      /* bordures fines */
   --accent: #c6a572;      /* doré doux */
-  --accent-dark: #a27b46; /* doré plus foncé pour hover */
+  --accent-dark: #a27b46; /* doré foncé */
 
   --max-width: 960px;
   --radius-lg: 18px;
@@ -39,23 +39,17 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", sans-serif;
   background: radial-gradient(circle at top left, #fbf8f3 0, #f4efe6 40%, #f0eadf 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
 
-/* Liens généraux */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-/* Conteneur principal */
 .container {
   width: 90%;
   max-width: var(--max-width);
@@ -82,18 +76,16 @@ a:hover {
 
 .site-title {
   margin: 0;
-  font-family: "Playfair Display", "Times New Roman", serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-/* Navigation */
 .site-nav {
   display: flex;
   gap: 1.6rem;
-  align-items: center;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -125,14 +117,13 @@ a:hover {
   width: 100%;
 }
 
-/* ---------- TYPO & sections ---------- */
+/* ---------- TYPO & layout ---------- */
 
 main.container {
   padding-top: 3rem;
   padding-bottom: 4rem;
 }
 
-/* Intro en haut de chaque page */
 .page-intro {
   margin: 2.8rem 0 2rem;
   max-width: 720px;
@@ -140,7 +131,7 @@ main.container {
 
 .page-intro h1 {
   margin: 0 0 0.6rem;
-  font-family: "Playfair Display", "Times New Roman", serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -154,21 +145,22 @@ main.container {
   color: var(--muted);
 }
 
-/* Sections génériques (Education, Projects, About...) */
+/* ---------- Sections ---------- */
+
 .project-section {
   margin: 3.5rem 0;
 }
 
 .project-section h2 {
   margin-bottom: 1.4rem;
-  font-family: "Playfair Display", "Times New Roman", serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.3rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-/* ---------- Grille de cartes ---------- */
+/* ---------- Grille ---------- */
 
 .projects-grid {
   display: grid;
@@ -176,7 +168,7 @@ main.container {
   gap: 1.6rem;
 }
 
-/* ---------- Carte “haut de gamme” ---------- */
+/* ---------- Cartes premium ---------- */
 
 .project-card {
   background: linear-gradient(145deg, var(--card-bg), #fdfaf5);
@@ -198,29 +190,33 @@ main.container {
 
 .project-card h3 {
   margin: 0;
-  font-family: "Playfair Display", "Times New Roman", serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* Meta (lieu, école, dates) */
 .project-meta {
-  margin: 0;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--muted);
 }
 
-/* Tags (Python, Control, GP...) */
+.project-summary {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #2a2927;
+}
+
+/* ---------- Tags ---------- */
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   font-size: 0.72rem;
-  margin-top: 0.1rem;
 }
 
 .project-tags span {
@@ -229,17 +225,9 @@ main.container {
   padding: 0.16rem 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-weight: 400;
 }
 
-/* Texte principal dans les cartes et sections */
-.project-summary {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #2a2927;
-}
-
-/* ---------- Liens type “bouton” ---------- */
+/* ---------- Boutons premium ---------- */
 
 .project-links {
   margin-top: 0.3rem;
@@ -249,9 +237,6 @@ main.container {
 }
 
 .project-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 0.32rem 0.9rem;
   border-radius: var(--radius-pill);
   font-size: 0.8rem;
@@ -260,7 +245,7 @@ main.container {
   border: 1px solid var(--accent);
   color: var(--accent-dark);
   background: rgba(255, 255, 255, 0.4);
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  transition: 0.2s ease;
 }
 
 .project-links a:hover {
@@ -270,20 +255,17 @@ main.container {
   transform: translateY(-1px);
 }
 
-/* ---------- Listes dans Contact etc. ---------- */
+/* ---------- Image Education ---------- */
 
-.project-section ul.project-summary {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.project-section ul.project-summary li a {
-  border-bottom: 1px solid transparent;
-  padding-bottom: 0.05rem;
-}
-
-.project-section ul.project-summary li a:hover {
-  border-bottom-color: rgba(198, 165, 114, 0.8);
+.edu-img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 14px;
+  border: 1px solid rgba(224, 214, 200, 0.8);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+  display: block;
+  object-fit: cover;
 }
 
 /* ---------- Footer ---------- */
@@ -312,30 +294,10 @@ main.container {
   }
 
   .page-intro h1 {
-    font-size: 2.0rem;
-  }
-
-  main.container {
-    padding-top: 2.4rem;
-    padding-bottom: 3rem;
-  }
-
-  .project-section {
-    margin: 3rem 0;
+    font-size: 2rem;
   }
 
   .project-card {
     padding: 1.2rem 1.3rem 1.3rem;
   }
-}
-
-.edu-img {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 14px;
-  border: 1px solid rgba(224, 214, 200, 0.8);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.04);
-  margin: 0 0 1rem;
-  display: block;
-  object-fit: cover;
 }
