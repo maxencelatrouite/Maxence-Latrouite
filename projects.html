@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects – Maxence Latrouite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER (identique aux autres pages) -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Maxence Latrouite</h1>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="projects">
+
+    <!-- INTRO -->
+    <section class="page-intro">
+      <h1>Projects</h1>
+      <p>
+        A selection of academic and personal projects in control, robotics,
+        probabilistic machine learning and experimental mechanics.
+        Many projects include downloadable reports or code repositories.
+      </p>
+    </section>
+
+    <!-- =============================== -->
+    <!-- 1. MACHINE LEARNING & PROBABILISTIC MODELING -->
+    <!-- =============================== -->
+
+    <section class="project-section">
+      <h2>Machine Learning &amp; Probabilistic Modeling</h2>
+
+      <div class="projects-grid">
+
+        <!-- Safe BO -->
+        <article class="project-card">
+          <h3>Safe Bayesian Optimization with Gaussian Processes</h3>
+          <p class="project-meta">2025 &middot; Automatic Control Laboratory</p>
+          <p class="project-tags">
+            <span>Python</span><span>PyTorch</span><span>Gaussian Processes</span><span>Safe BO</span>
+          </p>
+          <p class="project-summary">
+            Development of a safety-aware Bayesian optimization algorithm for
+            constrained black-box functions. Gaussian processes model both the
+            objective and the safety constraint to ensure safe exploration.
+          </p>
+          <div class="project-links">
+            <a href="pdf/safe_bo_report.pdf" target="_blank">📄 Report</a>
+            <a href="https://github.com/yourusername/safe-bo" target="_blank">💻 Code</a>
+          </div>
+        </article>
+
+        <!-- SWA-Gaussian -->
+        <article class="project-card">
+          <h3>Approximate Bayesian Inference via SWA-Gaussian</h3>
+          <p class="project-meta">2025 &middot; Uncertainty in Deep Learning</p>
+          <p class="project-tags">
+            <span>PyTorch</span><span>SWA-Gaussian</span><span>CNN</span><span>Uncertainty</span>
+          </p>
+          <p class="project-summary">
+            Implementation of SWA-Gaussian for convolutional networks to improve
+            predictive uncertainty, together with baseline comparisons and
+            calibration metrics.
+          </p>
+          <div class="project-links">
+            <a href="pdf/swag_cnn_report.pdf" target="_blank">📄 Report</a>
+            <a href="https://github.com/yourusername/swag-cnn" target="_blank">💻 Code</a>
+          </div>
+        </article>
+
+        <!-- GP Pollution -->
+        <article class="project-card">
+          <h3>Gaussian Process Regression for Air Pollution Prediction</h3>
+          <p class="project-meta">2025 &middot; Time Series Modeling</p>
+          <p class="project-tags">
+            <span>Python</span><span>Gaussian Processes</span><span>Time Series</span>
+          </p>
+          <p class="project-summary">
+            Spatio-temporal Gaussian process modeling of air pollution levels,
+            focusing on uncertainty quantification and multi-sensor data fusion.
+          </p>
+          <div class="project-links">
+            <a href="pdf/air_pollution_gp.pdf" target="_blank">📄 Report</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =============================== -->
+    <!-- 2. CONTROL & EMBEDDED SYSTEMS -->
+    <!-- =============================== -->
+
+    <section class="project-section">
+      <h2>Control &amp; Embedded Systems</h2>
+
+      <div class="projects-grid">
+
+        <!-- Line-following Robot -->
+        <article class="project-card">
+          <h3>Embedded Line-Following Robot – Low-Level Control</h3>
+          <p class="project-meta">2025 &middot; MSP432 / RSLK Platform</p>
+          <p class="project-tags">
+            <span>C</span><span>Embedded</span><span>PID Control</span><span>RSLK</span>
+          </p>
+          <p class="project-summary">
+            Implementation of sensor calibration, closed-loop speed control and
+            line-following behaviour on a TI RSLK robot using low-level C code.
+          </p>
+          <div class="project-links">
+            <a href="pdf/rslk_report.pdf" target="_blank">📄 Report</a>
+            <a href="https://github.com/yourusername/rslk-line-follower" target="_blank">💻 Code</a>
+          </div>
+        </article>
+
+        <!-- Raspberry Arm -->
+        <article class="project-card">
+          <h3>Robotic Arm for Raspberry Manipulation</h3>
+          <p class="project-meta">2024 &middot; Arduino + Sensors</p>
+          <p class="project-tags">
+            <span>Arduino</span><span>DC Motor</span><span>Sensor Fusion</span>
+          </p>
+          <p class="project-summary">
+            A robotic arm capable of detecting raspberry contact using motor
+            current sensing and evaluating ripeness via conductivity measurement.
+          </p>
+          <div class="project-links">
+            <a href="pdf/raspberry_arm_report.pdf" target="_blank">📄 Report</a>
+            <a href="https://github.com/yourusername/raspberry-arm" target="_blank">💻 Code</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =============================== -->
+    <!-- 3. EXPERIMENTAL MECHANICS -->
+    <!-- =============================== -->
+
+    <section class="project-section">
+      <h2>Experimental Mechanics &amp; Measurement</h2>
+
+      <div class="projects-grid">
+
+        <!-- Shaft Balancing -->
+        <article class="project-card">
+          <h3>High-Speed Shaft Balancing</h3>
+          <p class="project-meta">2025 &middot; Measurement Techniques</p>
+          <p class="project-tags">
+            <span>Vibrations</span><span>Signal Processing</span><span>Lab Setup</span>
+          </p>
+          <p class="project-summary">
+            Experimental setup for balancing high-speed rotating shafts, using
+            vibration measurements and frequency-domain analysis.
+          </p>
+          <div class="project-links">
+            <a href="pdf/shaft_balancing.pdf" target="_blank">📄 Report</a>
+          </div>
+        </article>
+
+        <!-- Flexible Mast -->
+        <article class="project-card">
+          <h3>Flexible Mast Deformation Measurement</h3>
+          <p class="project-meta">2025 &middot; Measurement Techniques</p>
+          <p class="project-tags">
+            <span>Python</span><span>Image Processing</span><span>Accelerometer</span>
+          </p>
+          <p class="project-summary">
+            Measurement of a flexible boat mast deformation using video analysis
+            and accelerometer data. Includes full signal-processing pipeline.
+          </p>
+          <div class="project-links">
+            <a href="pdf/flexible_mast.pdf" target="_blank">📄 Report</a>
+            <a href="https://github.com/yourusername/mast-measurement" target="_blank">💻 Code</a>
+          </div>
+        </article>
+
+        <!-- Falling Disks -->
+        <article class="project-card">
+          <h3>Bachelor Project – Falling Disks in Fluids</h3>
+          <p class="project-meta">2025 &middot; Bachelor Thesis</p>
+          <p class="project-tags">
+            <span>Fluid Mechanics</span><span>MATLAB</span><span>Image Processing</span>
+          </p>
+          <p class="project-summary">
+            Study of falling perforated disks to understand how holes and slits
+            influence rotation, stability and drag. Full MATLAB analysis pipeline.
+          </p>
+          <div class="project-links">
+            <a href="pdf/bachelor_falling_disks.pdf" target="_blank">📄 Report</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =============================== -->
+    <!-- 4. DESIGN & CAD -->
+    <!-- =============================== -->
+
+    <section class="project-section">
+      <h2>Design &amp; CAD</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Ergonomic Peeler – Concept & CAD</h3>
+          <p class="project-meta">2022 &middot; Product Design</p>
+          <p class="project-tags">
+            <span>CAD</span><span>Design</span>
+          </p>
+          <p class="project-summary">
+            Concept development and 3D modelling of an ergonomic peeler with a
+            strong focus on user comfort and manufacturability.
+          </p>
+          <div class="project-links">
+            <a href="pdf/peeler_design.pdf" target="_blank">📄 Report</a>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Maxence Latrouite. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
